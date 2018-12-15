@@ -5,14 +5,11 @@ description 'Skin Changer'
 version '1.0.3'
 
 client_scripts {
-	'locale.lua',
-	'locales/br.lua',
-	'locales/de.lua',
+	'@es_extended/locale.lua',
 	'locales/en.lua',
-	'locales/fi.lua',
-	'locales/fr.lua',
-	'locales/pl.lua',
-	'locales/sv.lua',
+	'locales/cn.lua',
+	'locales/zh.lua',
 	'config.lua',
+	'@es_extended/i18n.lua',
 	'client/main.lua'
 }

@@ -1,29 +1,30 @@
 # skinchanger
 
-## Download & Installation
+## 说明
+- 这个插件不适用于官方ESX
+- 这是基于魔改版修改的版本
+- 如有使用问题请添加qq群：208486207
+- 点击链接加入群【FiveM中文网官方群】：https://jq.qq.com/?_wv=1027&k=5BOQycm
 
-### Using [fvm](https://github.com/qlaffont/fvm-installer)
-```
-fvm install --save esx-org/skinchanger
-```
+## 下载 & 安装
 
-### Using Git
+### 使用 Git
 ```
 cd resources
-git clone https://github.com/ESX-Org/skinchanger skinchanger
+git clone https://github.com/ESX-CN/skinchanger skinchanger
 ```
 
-### Manually
-- Download https://github.com/ESX-Org/skinchanger/archive/master.zip
+### 手动
+- 下载 https://github.com/ESX-CN/skinchanger/archive/master.zip
 
-## Installation
-- Add this to your `server.cfg`:
+## 安装
+- 添加下列内容至你的 `server.cfg`:
 
 ```
 start skinchanger
 ```
 
-### Usage
+### 使用方法
 
 ```lua
 local isMale = true
@@ -87,10 +88,12 @@ TriggerEvent('skinchanger:getSkin', function(skin)
 	print(json.encode(skin))
 end)
 ```
+## 更新记录
+- [2018-12-15] 适应魔改版，简繁英自适应，删除无用语言
 
 # Legal
 ### License
-skinchanger - make your own skin!
+skinchanger - 制作你自己的外观!
 
 Copyright (C) 2015-2018 Jérémie N'gadi
 
