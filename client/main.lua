@@ -94,7 +94,7 @@ function LoadDefaultModel(malePed, cb)
 
 	RequestModel(characterModel)
 
-	Citizen.CreateThread(function()
+	if characterModel then
 		while not HasModelLoaded(characterModel) do
 			RequestModel(characterModel)
 			Citizen.Wait(0)
@@ -112,7 +112,7 @@ function LoadDefaultModel(malePed, cb)
 		end
 
 		TriggerEvent('skinchanger:modelLoaded')
-	end)
+	end
 end
 
 function GetMaxVals()
@@ -378,6 +378,11 @@ AddEventHandler('skinchanger:loadSkin', function(skin, cb)
 			TriggerEvent('skinchanger:loadDefaultModel', false, cb)
 		end
 	else
+		if skin['sex'] == 0 then
+			TriggerEvent('skinchanger:loadDefaultModel', true, cb)
+		else
+			TriggerEvent('skinchanger:loadDefaultModel', false, cb)
+		end
 		ApplySkin(skin)
 
 		if cb ~= nil then
