@@ -1,4 +1,4 @@
-Locales['zh'] = {
+Locales['tc'] = {
   ['sex'] = '性別',
   ['face'] = '臉型',
   ['skin'] = '膚色',
