@@ -1,3 +1,13 @@
+Config = {}
+
+if GetCurrentLanguageId() == 9 then
+    Config.Locale = "tc"
+elseif GetCurrentLanguageId() == 12 then
+    Config.Locale = "sc"
+else
+    Config.Locale = "en"
+end
+
 local Components = {
 	{label = _U('sex'),						name = 'sex',				value = 0,		min = 0,	zoomOffset = 0.6,		camOffset = 0.65},
 	{label = _U('face'),					name = 'face',				value = 0,		min = 0,	zoomOffset = 0.6,		camOffset = 0.65},
